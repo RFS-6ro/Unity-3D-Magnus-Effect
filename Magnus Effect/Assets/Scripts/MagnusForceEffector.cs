@@ -20,7 +20,7 @@ public class MagnusForceEffector : MonoBehaviour {
 		{
 			float planeVel = new Vector3(mp.Rigidbody.velocity.x, 0, mp.Rigidbody.velocity.z).magnitude;
 			float forceM = (mp.DragCoefficient * areaDensity * mp.CrossSectionalArea * Mathf.Pow(planeVel, 2f)) / 2;
-			mp.Rigidbody.AddForce(Vector3.up * forceM);
+			mp.Rigidbody.AddForce(transform.up * forceM);
 		}		
 	}
 
